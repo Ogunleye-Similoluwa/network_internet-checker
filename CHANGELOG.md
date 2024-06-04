@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.0.0+1
+## 1.0.0+2
 
-- Initial release of the `network_internet_checker` package.
-- Added `ConnectivityWidget` to handle connectivity changes with customizable UI elements for no internet connection.
-- Implemented connectivity status checking using the `connectivity_plus` package.
-- Added loading indicator customization and connectivity status display.
+- Updated Initial release of the `network_internet_checker` package.
+- Updated the name of the package in the readme file.
+- Updated Git repository for the code base.
+- Formatted Loading Screen and Network Widget Screen.
