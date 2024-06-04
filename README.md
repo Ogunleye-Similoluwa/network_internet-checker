@@ -1,9 +1,9 @@
 # network_internet_checker
 
 The [connectivity](https://pub.dev/packages/connectivity) package and other similar packages only
-provides information if there is a network connection, but not if the network is connected to
-the Internet. That's why the
-[internet_connectivity_checker](https://github.com/Ogunleye-Similoluwa/network_internet_checker) package
+provides information if there is a network connection, but not if the network is connected to 
+the Internet. That's why the 
+[network_internet_c hecker](https://github.com/Ogunleye-Similoluwa/network_internet-checker) package
 helps you easily manage widgets dynamically based on the device's internet access.
 
 <br>
@@ -21,7 +21,7 @@ flutter pub add network_internet_checker
 ## 🛠️ Usage
 
 
-Simply import `'package:network_internet_checker/network_widget.dart'` and simply
+Simply import `package:network_internet_checker/network_internet_checker.dart'` and simply
 pass the `Required Parameters` to the  widget. It takes a some required parameter such as the child wiget , an onPressed function, etc.
 
 
