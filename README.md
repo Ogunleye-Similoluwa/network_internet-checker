@@ -3,7 +3,7 @@
 The [connectivity](https://pub.dev/packages/connectivity) package and other similar packages only
 provides information if there is a network connection, but not if the network is connected to 
 the Internet. That's why the 
-[internet_connectivity_checker](https://github.com/Ogunleye-Similoluwa/network_internet_checker) package
+[network_internet_checker](https://github.com/Ogunleye-Similoluwa/network_internet_checker) package
 helps you easily manage widgets dynamically based on the device's internet access.
 
 <br>
