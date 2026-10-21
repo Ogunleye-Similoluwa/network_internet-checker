@@ -11,9 +11,9 @@ the internet is unreachable, then brings your screen back by itself when the
 connection returns.
 
 <p>
-  <img src="https://raw.githubusercontent.com/Ogunleye-Similoluwa/network_internet-checker/main/screenshots/offline_light.png" width="240" alt="Offline screen, light mode">
-  <img src="https://raw.githubusercontent.com/Ogunleye-Similoluwa/network_internet-checker/main/screenshots/offline_dark.png" width="240" alt="Offline screen, dark mode">
-  <img src="https://raw.githubusercontent.com/Ogunleye-Similoluwa/network_internet-checker/main/screenshots/banner.png" width="240" alt="Offline banner">
+  <img src="https://raw.githubusercontent.com/Ogunleye-Similoluwa/network_internet-checker/master/screenshots/offline_light.png" width="240" alt="Offline screen, light mode">
+  <img src="https://raw.githubusercontent.com/Ogunleye-Similoluwa/network_internet-checker/master/screenshots/offline_dark.png" width="240" alt="Offline screen, dark mode">
+  <img src="https://raw.githubusercontent.com/Ogunleye-Similoluwa/network_internet-checker/master/screenshots/banner.png" width="240" alt="Offline banner">
 </p>
 
 ## Features
