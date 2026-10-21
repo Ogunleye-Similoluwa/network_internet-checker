@@ -1,1 +1,0 @@
- C:\\Users\\User\\StudioProjects\\network_internet_checker\\.dart_tool\\flutter_build\\a41b77005f4f97bd4a411ddb1d058772\\native_assets.yaml: 

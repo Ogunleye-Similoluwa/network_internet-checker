@@ -1,102 +1,70 @@
 # network_internet_checker
 
-The [connectivity](https://pub.dev/packages/connectivity) package and other similar packages only
-provides information if there is a network connection, but not if the network is connected to 
-the Internet. That's why the 
-[network_internet_c hecker](https://github.com/Ogunleye-Similoluwa/network_internet-checker) package
-helps you easily manage widgets dynamically based on the device's internet access.
+[![pub package](https://img.shields.io/pub/v/network_internet_checker.svg)](https://pub.dev/packages/network_internet_checker)
 
-<br>
+Wrap any screen in `ConnectivityWidget` and it shows a "no internet" page
+whenever the device goes offline, then brings your screen back, rebuilt from
+scratch, as soon as the connection returns. It's built on
+[connectivity_plus](https://pub.dev/packages/connectivity_plus) and works on
+Android, iOS, web, macOS, Windows and Linux.
 
-![Demo](demo/demo.gif)
-
-<br>
-
-## 🧑‍💻 Getting started
+## Getting started
 
 ```bash
 flutter pub add network_internet_checker
 ```
 
-## 🛠️ Usage
-
-
-Simply import `package:network_internet_checker/network_internet_checker.dart'` and simply
-pass the `Required Parameters` to the  widget. It takes a some required parameter such as the child wiget , an onPressed function, etc.
-
-
-
-<br>
-
----
-
-<br>
-
-### Exemple
+## Usage
 
 ```dart
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+import 'package:network_internet_checker/network_internet_checker.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: const Color(0x9f4376f8),
-      ),
-      home: Scaffold(
-        body: ConnectivityWidget(
-          noInternetText: const Text("Check your internet and try again", ),
-          addIcon: false,
-          loadingColor: Colors.brown,
-          textButton: Text("Try Again"),
-          onButtonPressed: () {
-            print("Check your internet and try again"); },
-          child: Center(child: const Text("Working",style: TextStyle(fontSize: 20),)),
-        ),
-      ),
-    );
-  }
-}
+ConnectivityWidget(
+  noInternetText: const Text('Check your internet and try again'),
+  textButton: const Text('Try again'),
+  addIcon: false,
+  loadingColor: Colors.brown,
+  onButtonPressed: () {
+    // Optional: runs when the user taps the retry button.
+  },
+  child: const HomeScreen(),
+)
 ```
 
+### Parameters
 
-## ℹ️ Additional Information
-Contribute to this project by making a PR ⬆️ or creating a new issue 🐞 on GitHub.
-<br>
-Do not hesitate to let a 🌟 on the [repo](https://github.com/Ogunleye-Similoluwa/network_connectivity.git) if you find it useful.
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `child` | yes | The widget shown while the device is online. |
+| `noInternetText` | yes | The message on the offline screen. |
+| `textButton` | yes | The label of the retry button. |
+| `addIcon` | yes | `true` to show your own `icon` instead of the bundled image. |
+| `onButtonPressed` | yes (nullable) | Called when the retry button is tapped. Pass `null` if you don't need it. |
+| `icon` | no | The widget shown on the offline screen when `addIcon` is `true`. |
+| `loadingColor` | no | The colour of the retry spinner. Defaults to the theme's primary colour. |
+| `backgroundColor` | no | The background of the offline screen. Defaults to white. |
 
-## 👷 Maintainers
-Created & maintained with 💖 by [Similoluwa Ogunleye](https://www.linkedin.com/in/ogunleye-similoluwa-7b16a1250/).
+### Good to know
 
+- The widget reports whether the device is connected to a network (Wi-Fi,
+  mobile, ethernet, VPN and so on). Like `connectivity_plus`, it can't tell
+  whether that network actually reaches the internet, for example behind a
+  captive portal.
+- Tapping retry re-checks the connection immediately and shows a spinner for
+  a few seconds.
 
-## 📄 License
+A runnable app is in [`example/`](example/lib/main.dart).
 
-```
-MIT License
+## Contributing
 
-Copyright (c) 2024 Ogunleye-Similoluwa
+Issues and pull requests are welcome on
+[GitHub](https://github.com/Ogunleye-Similoluwa/network_internet-checker).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Maintainer
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Created and maintained by
+[Similoluwa Ogunleye](https://www.linkedin.com/in/ogunleye-similoluwa-7b16a1250/).
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## License
 
-
-
-```
+MIT, see [LICENSE](LICENSE).
