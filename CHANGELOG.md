@@ -2,20 +2,41 @@
 
 ## 1.2.0
 
-- Added `package:network_internet_checker/network_internet_checker.dart` as the
+**New**
+
+- Detects real internet access, not just a network connection. Wi-Fi with no
+  internet now counts as offline.
+- Re-checks in the background, so the app recovers by itself when the
+  connection returns.
+- `InternetChecker`: status stream, `hasInternetAccess`, `checkNow()`, and
+  configurable targets, timeout, interval or a fully custom check.
+- `OfflineBanner`: keeps the app usable and shows an offline/back-online bar.
+- `InternetStatusBuilder`: rebuild any widget from the current status.
+- `ConnectivityWidget.offlineBuilder` for a fully custom offline page.
+- `ConnectivityWidget.onStatusChanged`, `rebuildOnReconnect`, `description`,
+  `checker` and `transitionDuration`.
+- `NoInternetScreen`, the redesigned default offline page: theme-aware with
+  dark mode, centred and scrollable on small screens, with a smooth fade.
+- All `ConnectivityWidget` parameters except `child` are now optional.
+- `package:network_internet_checker/network_internet_checker.dart` is the
   main import. `network_widget.dart` still works.
-- Fixed the bundled no-network image not loading in apps that use the package.
-- Fixed a crash when `onButtonPressed` is `null`, or when `addIcon` is `true`
-  without an `icon` (the bundled image is shown instead).
-- Fixed `setState() called after dispose()` when leaving the offline screen
-  while a retry was in progress.
-- The offline screen now scrolls and centres on small screens, and the image
-  is capped at 280px so the retry button stays visible.
-- The retry spinner now defaults to the theme's primary colour instead of
-  white, which was invisible on the default white background.
+
+**Fixed**
+
+- The bundled no-network image didn't load in apps that use the package.
+- Crash when `onButtonPressed` was `null`, or `addIcon` was `true` without an
+  `icon`.
+- `setState() called after dispose()` when leaving the offline screen during
+  a retry.
+- The retry spinner was white on a white background. It now uses the theme's
+  primary colour and stays until the check actually finishes.
+
+**Other**
+
 - Supports `connectivity_plus` 6.x and 7.x.
-- Removed the demo app from `lib/`; it now lives in `example/`.
-- Added widget tests, API docs and package metadata.
+- `Screen2` is deprecated in favour of `NoInternetScreen`.
+- The demo app moved from `lib/` to `example/`.
+- Added tests, API docs, screenshots and package metadata.
 
 ## 1.1.0
 

@@ -1,7 +1,7 @@
 name: network_internet_checker
 description: >-
-  A Flutter widget that swaps your screen for a customisable "no internet"
-  page when the device goes offline and restores it when it reconnects.
+  Detects real internet access, not just a network connection, and shows a
+  customisable offline screen or banner that recovers automatically.
 version: 1.2.0
 homepage: https://github.com/Ogunleye-Similoluwa/network_internet-checker
 repository: https://github.com/Ogunleye-Similoluwa/network_internet-checker
@@ -27,6 +27,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+
+screenshots:
+  - description: Default offline screen in light mode
+    path: screenshots/offline_light.png
+  - description: Default offline screen in dark mode
+    path: screenshots/offline_dark.png
+  - description: OfflineBanner keeping the app usable while offline
+    path: screenshots/banner.png
 
 flutter:
   assets:
